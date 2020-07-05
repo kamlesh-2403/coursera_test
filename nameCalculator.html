@@ -1,0 +1,19 @@
+<!-- program to calculate the character value of a name -->
+<!DOCTYPE html>
+<html ng-app="nameCalculator">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="nameCalculator.js" charset="utf-8"></script>
+    <title>Value of a name</title>
+  </head>
+  <body>
+    <div ng-controller="nameCalculatorController">
+        <div >
+          <input type="text" ng-model="name" ng-keyup="displayNoValue();">
+        </div>
+          <h1>total value of the name is: {{nameValue}}</h1>
+          {{name}}
+    </div>
+  </body>
+</html>
