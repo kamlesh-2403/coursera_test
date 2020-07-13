@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="app1">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app1.js"></script>
+    <title>Panda_Life</title>
+  </head>
+  <body>
+    <div ng-controller="AppController1">
+      {{name}} has a message for you
+      <br>
+      {{saymessage()}}<br>
+      {{sayLovesmessage()}}<br>
+      Truth : {{ sayLovesmessage() | truth : 'loves' : 'you' | uppercase }}<br>
+      cost : {{ cookieCost | currency : "#blah" : 4 }}
+      <div>
+        <button ng-click="FeedHim()">Feed me</button>
+        <br>
+        <img ng-src="panda_{{stateofbeing}}.jpg">
+      </div>
+    </div>
+  </body>
+</html>
