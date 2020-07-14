@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="app_repeat.js" charset="utf-8"></script>
+    <title></title>
+  </head>
+  <body>
+      <div ng-controller="appController">
+        <h3>Shopping List:</h3>
+        <ul>
+          <input type="text" ng-model="shoppingList2[0].quantity">
+          <li ng-repeat="item in shoppingList2">{{ item.name }} of {{item.quantity}}</li>
+        </ul>
+        <input type="text" ng-model="newItemName" placeholder="item name">
+        <input type="text" ng-model="newItemQuantity" placeholder="Item quantity">
+        <button type="button" ng-click="updateValue()">Press</button>
+      </div>
+  </body>
+</html>
